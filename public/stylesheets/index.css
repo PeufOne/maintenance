@@ -1,0 +1,174 @@
+body{
+	padding: 50px;
+	overflow-y: hidden;
+}
+
+@media screen and (max-width: 1200px){
+	#followed{
+		display: none;
+	}
+	#works{
+		width: 75% !important;
+	}
+	#listToolContainer{
+		width: 25% !important;
+	}
+	body{
+		padding: 1px;
+	}
+}
+
+@media print{
+
+
+
+	#worksContent{
+		margin-top: 0px !important;
+	}
+
+	#works{
+		border: 0px !important;
+		width: auto !important;
+	}
+
+	.work{
+		page-break-inside: avoid !important;		
+	}
+
+	#listToolContainer, .levelSelect, #printBtn, #doBtn, #followed{
+		display: none !important;
+	}
+
+	.workImg{
+		width: 220px !important;
+	}
+
+	body{
+		padding: 0px !important;
+	}
+
+	body, #content, #worksContent, #works{
+		height: auto !important;
+	}
+	
+}
+
+
+
+.tool, .levelSelect, #printBtn, #doBtn, .removeWork, #openWorkForm, #worksList, #imgList{
+	cursor: pointer;
+}
+
+#listTool li:hover, .workList:hover{
+	border-left: 4px grey solid;
+}
+
+#listTool{
+	min-width: 200px;
+	height: calc(100% - 125px);
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.workImg{
+	width: 260px;
+}
+
+
+html,
+body,
+#content,
+#works,
+#worksContent,
+#listToolContainer
+{
+	height: 100%;
+}
+
+#worksContent{
+	margin-top: 43px;
+	height: calc(100% - 43px);
+	overflow-y: auto;
+}
+
+.levelSelect, #works, #levelSelectDiv{
+	border-radius: 15px 15px 0px 0px
+}
+
+
+#followedlist{
+	max-width: 180px;
+	margin: auto;
+}
+
+#works{
+	border: 1px solid #ccc;
+	max-width: 1000px;
+}
+
+#searchWork{
+	border-radius: 5px 0px 0px 0px;
+	border: none;
+}
+
+.decovi-blue{
+	background-color: #3459A5;
+	color: white;
+}
+
+.decovi-blue-txt{
+	color: #3459A5;
+}
+
+#printBtn:hover{
+	background-color: #3459A5;
+	color: white;
+}
+
+#doBtn:hover, #openWorkForm:hover{
+	background-color: #4CAF50;
+	color: white;	
+}
+
+#printBtn, #doBtn, #openWorkForm{
+	border-radius: 5px 5px 5px 5px;
+}
+
+.removeWork{
+	border: solid 2px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+
+.modifyWork:hover, .openWorkForm:hover{
+	transform: scale(1.2);
+}
+
+#imgList li:hover{
+	border-right: 5px grey solid;
+}
+
+#workStepList input{
+	margin-bottom: 5px;
+}
+
+/* Custom scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
