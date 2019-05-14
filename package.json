@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development pm2 start --name app_dev app.js & pm2 monit",
+    "prod": "cross-env NODE_ENV=production pm2 start --name app_prod app.js & pm2 monit"
   },
   "author": "Jonas Voisard",
   "license": "ISC",
