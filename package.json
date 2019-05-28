@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development pm2 start --name app_dev app.js & pm2 monit",
-    "prod": "cross-env NODE_ENV=production pm2 start --name app_prod app.js & pm2 monit"
+    "dev": "cross-env NODE_ENV=development pm2 start --name maintenance_dev app.js & pm2 monit",
+    "prod": "cross-env NODE_ENV=production pm2 start --name maintenance app.js & pm2 monit"
   },
   "author": "Jonas Voisard",
   "license": "ISC",

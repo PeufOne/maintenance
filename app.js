@@ -63,6 +63,18 @@ app.use(function(err, req, res, next) {
   res.render('error')
 })
 
-app.listen(3000)
+
+//PORT init
+if (!process.env.PORT) {
+   if (process.env.NODE_ENV == 'production') {
+    process.env.PORT = 5000
+  }else{
+    process.env.PORT = 5001
+  } 
+}
+
+app.listen(process.env.PORT, () => {
+  console.log(`Listen on the port ${process.env.PORT}`)
+})
 
 module.exports = app
